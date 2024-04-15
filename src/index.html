@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="./output.css" rel="stylesheet">
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body class="overflow-x-hidden min-h-[100vh]">
+
+
+  
+
+  <div class="sticky top-0 left-0 bg-white z-20">
+    <nav class="flex  max-w-[1000px] mx-auto justify-between 
+                    h-[80px] items-center px-2  ">
+      
+      <div class="">
+        <img src="../assets/images/logo.svg" />
+      </div>
+      <ul class="sm:flex gap-8 hidden hover:*:text-black/50  [&>*]:font-semibold ">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+
+
+    </nav>
+  </div>
+  
+  <div id="sidebar" class="h-screen w-[300px] border fixed right-0 top-0  bg-white sm:hidden z-[100]">
+    <ul class="flex flex-col gap-8 mt-32 ml-8 [&>*]:font-semibold [&>*]:text-[1.2rem]">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">New</a></li>
+      <li><a href="#">Popular</a></li>
+      <li><a href="#">Trending</a></li>
+      <li><a href="#">Categories</a></li>
+    </ul>         
+  </div>
+  <button class="w-[35px] h-[25px] justify-between sm:hidden flex z-[100]
+       flex-col fixed right-[10px]  top-[25px]" id="burger">
+      <div class="bg-black w-[35px] h-[3px]"></div>
+      <div class="bg-black w-[35px] h-[3px]"></div>
+      <div class="bg-black w-[35px] h-[3px]"></div>
+  </button>
+
+  <div class="top-0 left-0 w-screen h-screen fixed bg-black/60 z-30 sm:hidden" id="gray_window"></div>
+  
+  <div class="px-2 flex flex-col sm:flex-row max-w-[1000px] mx-auto gap-6  mt-8">
+
+    <div class="flex flex-col gap-8  basis-[65%]  ">
+      <div>
+        <picture>
+          <source media="(min-width:650px)" srcset="../assets/images/image-web-3-desktop.jpg" />
+          <source media="(min-width:465px)" srcset="../assets/images/image-web-3-mobile.jpg" />
+          <img src="../assets/images/image-web-3-mobile.jpg" />
+      
+        </picture>
+
+      </div>
+      <div class="flex flex-col sm:flex-row  gap-5">
+        <h1 class="text-[2.5rem] font-bold sm:w-[45%]">The Bright Future of Web 3.0?</h1>
+
+        <div class="sm:w-[55%]">
+          <p>
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
+    
+          <button class="hover:font-semibold hover:text-white/50
+             mt-7 px-6 py-2 rounded bg-[hsl(5,85%,63%)] tracking-widest text-white text-[0.8rem]">
+            Read more
+          </button>
+        </div>
+      </div>  
+    </div>
+    <div class="basis-[35%] flex gap-10 flex-col bg-[hsl(240,100%,5%)] text-white px-4 py-6">
+      <h2 class="text-[2.5rem] font-bold text-[hsl(35,77%,62%)]">New </h2>
+      <div  >
+        <h3 class="font-bold ">Hydrogen VS Electric Cars</h3>
+        <p class="mt-2 text-white/70">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      <hr class="border-white/40"/>
+      <div>
+        <h3 class="font-bold">The Downsides of AI Artistry</h3>
+        <p class="mt-2 text-white/70">What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      <hr class="border-white/40"/>
+      <div>
+        <h3 class="font-bold">Is VC Funding Drying Up?</h3>
+        <p class="mt-2 text-white/70">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="flex flex-col sm:flex-row max-w-[1000px] mx-auto mt-12 gap-8 px-2">
+    <div class="flex gap-4 w-full items-start">
+      
+        <div  class="w-[20%] mt-2 min-w-[70px]">
+          <img src="/assets/images/image-retro-pcs.jpg" />
+        </div>
+      <div class="flex flex-col gap-2 w-[60%]">
+        <h2 class="text-gray-700/60 text-3xl font-semibold">01</h2>
+        <h3 class="font-bold">Reviving Retro PCs<h3>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+
+    </div>
+
+    <div  class="flex w-full gap-4 items-start">
+  
+        <div class="w-[20%] mt-2 min-w-[70px]">
+          <img src="/assets/images/image-top-laptops.jpg" />
+        </div>
+      
+      <div class="flex flex-col gap-2 w-[60%]">
+        <h2 class="text-gray-700/60 text-3xl font-semibold">02</h2>
+        <h3 class="font-bold">Top 10 Laptops of 2022</h3>
+        <p>Our best picks for various needs and budgets.</p>
+      </div>
+      
+    </div>
+
+    <div  class="flex w-full gap-4 items-start">
+      
+      <div class="w-[20%] mt-2 min-w-[70px]">
+        <img src="/assets/images/image-gaming-growth.jpg" alt="" />
+      </div>
+      
+    
+      <div class="flex flex-col gap-2 w-[60%]">
+        <h2 class="text-gray-700/60 text-3xl font-semibold">03</h2>
+        <h3 class="font-bold">The Growth of Gaming</h3>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  
+  <div class="text-center mt-8 bg-black py-2 text-white/70">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Alexandr Vorotnikov</a>.
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#sidebar {
+    translate: 300px 0;
+    transition: translate 500ms;    
+}
+
+#sidebar.active{
+    translate: 0 0;
+    transition: translate 500ms;
+}
+
+#burger div{
+    rotate: 0;
+    transition: rotate 500ms, opacity 400ms;
+}
+
+#sidebar.active ~ #burger  div:first-child{
+    rotate: 45deg;
+    transform-origin: 5%;
+}
+
+#sidebar.active ~ #burger  div:last-child{
+    rotate: -45deg;
+    transform-origin: 5%;
+}
+#sidebar.active ~ #burger  div:nth-child(2){
+    opacity: 0;
+}
+
+#sidebar:not(.active) ~ #burger  div:first-child{
+    rotate: 0;
+    transform-origin: 5%;
+}
+
+#sidebar:not(.active) ~ #burger  div:last-child{
+    rotate: 0;
+    transform-origin: 5%;
+}
+#sidebar:not(.active) ~ #burger  div:nth-child(2){
+    opacity: 1;
+}
+
+ #sidebar:not(.active) ~ #gray_window{
+    display: none;
+}
